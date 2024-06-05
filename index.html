@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta lang="en">
+
+        <style>
+
+        #about{
+            background-color: aquamarine;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            font-weight: bold;
+            background-color: violet;
+        }
+
+        header{
+            background-color: rgb(245, 249, 22);
+            font-style: italic;
+        }
+
+        header nav ul{
+            background-color: rgb(230, 135, 20);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div, article{
+            font-stretch: expanded;
+            background-color: cadetblue;
+        }
+
+        .thefooter{
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+
+
+        @media (min-width: 756px) {
+        body {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas:
+                "nav header"
+                "nav main"
+                "nav footer";
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        main {
+            grid-area: main;
+            flex-direction: column;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+    }
+
+    @media (max-width: 755px) {
+        nav {
+            display: block;
+        }
+
+        main {
+            flex-direction: column;
+        }
+    }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1>New page</h1>
+        </header>
+
+       <nav>
+            <ul>
+                <li><a href="other-pages/services.html">Services</a></li>
+                <li><a href="other-pages/contact.html">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <p>An example of a paragraph in this section</p>
+                <article>
+                    <h2>Title of the article</h2>
+                    <p>Text of the article</p>
+                    <img src="img_lights.jpg" alt="Image of the sky">
+                    <video width="400" height="400" controls>
+                        <source src="thelights.mp4" type="video/mp4"> A video of the Nothern Lights
+                    </video>
+                </article>
+            </section>
+
+            <section id="about">
+                <h2>About</h2>
+                <p>A section with info</p>
+            </section>
+
+            <section>
+                <div>
+                    <p>This is some non-semantic content</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="thefooter">
+            <article>
+                <h2>Title of article no2</h2>
+                <p>Text of the second article</p>
+                <p>More comtent</p>
+            </article>
+        </footer>
+
+    </body>
+</html>
+
