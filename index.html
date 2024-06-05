@@ -39,46 +39,7 @@
         }
 
 
-        @media (min-width: 756px) {
-        body {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            grid-template-areas:
-                "nav header"
-                "nav main"
-                "nav footer";
-        }
-
-        header {
-            grid-area: header;
-        }
-
-        nav {
-            grid-area: nav;
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-        }
-
-        main {
-            grid-area: main;
-            flex-direction: column;
-        }
-
-        footer {
-            grid-area: footer;
-        }
-    }
-
-    @media (max-width: 755px) {
-        nav {
-            display: block;
-        }
-
-        main {
-            flex-direction: column;
-        }
-    }
+        
 
 
         </style>
